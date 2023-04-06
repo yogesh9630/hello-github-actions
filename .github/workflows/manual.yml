@@ -1,0 +1,14 @@
+name: Manual workflow
+
+on: 
+ push:
+    branches: [ "yogesh9630-patch-3" ]
+ pull_request:
+    branches: [ "main" ]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send greeting
+      run: sh mail.sh
